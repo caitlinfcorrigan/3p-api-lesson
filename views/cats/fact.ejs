@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <% if (catFact) { %>
+        <h2><%= catFact.fact %></h2>
+    <% } else { %>
+        <h3 class="text-center text-info">
+        No fact!
+        </h3>
+    <% } %> 
+    <a href="/cats/fact">Get a new fact!</a>
+</body>
+</html>
