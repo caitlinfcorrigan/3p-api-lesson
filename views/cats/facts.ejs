@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All the Cat Facts</title>
+</head>
+<body>
+      <!-- HTML to determine number of facts -->
+  <h1>Get all the facts you want!</h1>
+  <p>How many facts do you want?</p>
+      <form action="/cats/facts" method="GET">
+          <input type="number" name="limit" class="form-control">
+            <button type="submit">Go!</button>
+          </span>
+      </form>
+
+<!-- Here are the requested facts -->
+    <% if (catFacts) { %>
+        <h2>Here are your cat facts!</h2>
+        <ul>
+        <% catFacts.data.forEach(function(f) { %>
+            <li><%= f.fact %></li>
+        <% }); %>
+        </ul>
+    <% } else { %>
+        <h3 class="text-center text-info">
+        No fact!
+        </h3>
+    <% } %> 
+    <a href="/cats/fact">Get a new fact!</a>
+</body>
+</html>

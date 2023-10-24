@@ -8,6 +8,7 @@ const catsCtrl = require('../controllers/cats');
 
 /* GET home page. */
 router.get('/cats/fact', catsCtrl.index);
+router.get('/cats/facts', catsCtrl.show);
 
 router.get('/', function(req, res, next) {
   res.render('index');
